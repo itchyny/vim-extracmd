@@ -1,0 +1,69 @@
+*extracmd.txt*	Define extra commands.
+
+Version: 0.0
+Author: itchyny (https://github.com/itchyny)
+License: MIT License
+Repository: https://github.com/itchyny/vim-extracmd
+Last Change: 2015/02/21 22:51:52.
+
+CONTENTS					*extracmd-contents*
+
+Introduction				|extracmd-introduction|
+Functions				|extracmd-functions|
+Examples				|extracmd-examples|
+Changelog				|extracmd-changelog|
+
+==============================================================================
+INTRODUCTION					*extracmd-introduction*
+This *extracmd* ( *vim-extracmd* *extracmd.vim* ) plugin enables you to define extra
+commands. This plugin is useful for defining commands starting lower case
+alphabets. You can use this plugin to fix your type miss in the command line.
+
+------------------------------------------------------------------------------
+FUNCTIONS					*extracmd-functions*
+
+	extracmd#set([{flag},] {name}, {command})
+
+		Defines a new command.
+		You can use '<silent>' or '<buffer>' for {flag}.
+
+------------------------------------------------------------------------------
+EXAMPLES					*extracmd-examples*
+>
+	" Fixing typo
+	call extracmd#set('q1', 'q!')
+	call extracmd#set('qa1', 'qa!')
+	call extracmd#set('vps', 'vsp')
+
+	" Long command
+	call extracmd#set('<silent>', 'w!!', 'w !sudo tee > /dev/null %')
+	call extracmd#set('<silent>', 'date', 'echo strftime(''%x (%a) %X'')')
+
+	" Longer command
+	call extracmd#set('<silent>', 'rtp',
+		\'vnew<bar>
+		\ silent!%d_<bar>
+		\ silent 0put=split(&rtp, '','')<bar>
+		\ unlet! b:_<bar>
+		\ setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted')
+
+	" Hacking the internal command
+	call extracmd#set('<silent>', 'scriptnames',
+		\'vnew<bar>
+		\ redir => b:_<bar>
+		\   silent!scriptnames<bar>
+		\ redir END<bar>
+		\ silent!%d_<bar>
+		\ silent 0put=b:_<bar>
+		\ silent!1d_<bar>
+		\ unlet! b:_<bar>
+		\ setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted')
+<
+==============================================================================
+CHANGELOG					*extracmd-changelog*
+
+0.0	2014-02-21
+	- Initial commit.
+
+==============================================================================
+vim:tw=78:sw=4:ts=8:ft=help:norl:noet:
