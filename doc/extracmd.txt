@@ -1,10 +1,10 @@
 *extracmd.txt*	Define extra commands.
 
-Version: 0.1
+Version: 0.2
 Author: itchyny (https://github.com/itchyny)
 License: MIT License
 Repository: https://github.com/itchyny/vim-extracmd
-Last Change: 2015/02/24 09:11:21.
+Last Change: 2015/02/24 09:12:27.
 
 CONTENTS					*extracmd-contents*
 
@@ -67,14 +67,14 @@ EXAMPLES					*extracmd-examples*
 ==============================================================================
 CHANGELOG					*extracmd-changelog*
 
-0.2	2014-02-24
+0.2	2015-02-24
 	- Check the string after first [..]. (Example: :foo[bar]baz)
 	- Support multiple abbreviation. (Example: :foo[bar]baz[bar])
 
-0.1	2014-02-23
+0.1	2015-02-23
 	- Support command abbreviation. (Example: :foo[bar])
 
-0.0	2014-02-21
+0.0	2015-02-21
 	- Initial commit.
 
 ==============================================================================
