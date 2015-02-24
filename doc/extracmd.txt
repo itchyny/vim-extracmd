@@ -4,7 +4,7 @@ Version: 0.1
 Author: itchyny (https://github.com/itchyny)
 License: MIT License
 Repository: https://github.com/itchyny/vim-extracmd
-Last Change: 2015/02/24 09:04:39.
+Last Change: 2015/02/24 09:11:21.
 
 CONTENTS					*extracmd-contents*
 
@@ -67,8 +67,12 @@ EXAMPLES					*extracmd-examples*
 ==============================================================================
 CHANGELOG					*extracmd-changelog*
 
+0.2	2014-02-24
+	- Check the string after first [..]. (Example: :foo[bar]baz)
+	- Support multiple abbreviation. (Example: :foo[bar]baz[bar])
+
 0.1	2014-02-23
-	- Support command abbreviation.
+	- Support command abbreviation. (Example: :foo[bar])
 
 0.0	2014-02-21
 	- Initial commit.
