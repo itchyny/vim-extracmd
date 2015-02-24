@@ -4,7 +4,7 @@ Version: 0.1
 Author: itchyny (https://github.com/itchyny)
 License: MIT License
 Repository: https://github.com/itchyny/vim-extracmd
-Last Change: 2015/02/24 09:03:12.
+Last Change: 2015/02/24 09:04:39.
 
 CONTENTS					*extracmd-contents*
 
@@ -42,7 +42,7 @@ EXAMPLES					*extracmd-examples*
 
 	" Long command
 	call extracmd#set('<silent>', 'w!!', 'w !sudo tee > /dev/null %')
-	call extracmd#set('<silent>', 'date', 'echo strftime(''%x (%a) %X'')')
+	call extracmd#set('<silent>', 'date', 'echo strftime("%x (%a) %X")')
 
 	" Longer command
 	call extracmd#set('<silent>', 'rtp',
