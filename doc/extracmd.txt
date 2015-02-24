@@ -4,7 +4,7 @@ Version: 0.1
 Author: itchyny (https://github.com/itchyny)
 License: MIT License
 Repository: https://github.com/itchyny/vim-extracmd
-Last Change: 2015/02/23 20:56:12.
+Last Change: 2015/02/24 09:02:05.
 
 CONTENTS					*extracmd-contents*
 
@@ -34,6 +34,7 @@ EXAMPLES					*extracmd-examples*
 	call extracmd#set('q1', 'q!')
 	call extracmd#set('qa1', 'qa!')
 	call extracmd#set('vps', 'vsp')
+	call extracmd#set('sil[ent]1', 'silent!')
 
 	" Disable some Ex commands
 	call extracmd#set('a[ppend]', '')
