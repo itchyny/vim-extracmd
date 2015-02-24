@@ -4,7 +4,7 @@ Version: 0.1
 Author: itchyny (https://github.com/itchyny)
 License: MIT License
 Repository: https://github.com/itchyny/vim-extracmd
-Last Change: 2015/02/24 09:02:05.
+Last Change: 2015/02/24 09:03:12.
 
 CONTENTS					*extracmd-contents*
 
@@ -53,7 +53,7 @@ EXAMPLES					*extracmd-examples*
 		\ setlocal buftype=nofile bufhidden=wipe noswapfile nobuflisted')
 
 	" Hacking the internal command
-	call extracmd#set('<silent>', 'scriptnames',
+	call extracmd#set('<silent>', 'scr[iptnames]',
 		\'vnew<bar>
 		\ redir => b:_<bar>
 		\   silent!scriptnames<bar>
